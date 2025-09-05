@@ -1,0 +1,27 @@
+PROGRAM 13: SET
+CODING:
+# Create two sets
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7, 8}
+print("Set A:", A)
+print("Set B:", B)
+# Union
+print("\nUnion (A ∪ B):", A.union(B))
+# Intersection
+print("Intersection (A ∩ B):", A.intersection(B))
+# Difference
+print("Difference (A - B):", A.difference(B))
+print("Difference (B - A):", B.difference(A))
+# Symmetric Difference
+print("Symmetric Difference (A Δ B):", A.symmetric_difference(B))
+# Adding element
+A.add(10)
+print("\nAfter adding :", A)
+# Removing element
+A.discard(3)
+print("After removing:", A)
+# Removing duplicates from a list using set
+numbers = [1, 2, 2, 3, 4, 4, 5, 6, 6]
+unique_numbers = set(numbers)
+print("\n\nOriginal List:", numbers)
+print("Unique elements using Set:", unique_numbers)
