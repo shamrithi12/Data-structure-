@@ -1,0 +1,28 @@
+PROGRAM 15 : DICTIONARY
+CODING:
+# Initialize dictionary
+student = {
+"name": "Arun",
+"age": 20,
+"marks": 85
+}
+# Accessing values safely
+print("Name:", student.get("name")) # Arun
+print("City:", student.get("city", "N/A")) # N/A
+# Adding/updating values
+student.update({"city": "Coimbatore", "marks": 90})
+# Display all keys and values
+print("Keys:", list(student.keys()))
+print("Values:", list(student.values()))
+print("Items:", list(student.items()))
+# Remove a key
+removed = student.pop("age")
+print("Removed age:", removed)
+# Set default value
+student.setdefault("gender", "Male")
+# Copy dictionary
+backup = student.copy()
+# Clear dictionary
+student.clear()
+print("\nBackup copy:", backup)
+print("Original after clear:", student)
