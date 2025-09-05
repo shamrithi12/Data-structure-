@@ -1,0 +1,17 @@
+PROGRAM 9: SELECTION SORT
+CODING:
+def selection_sort(arr):
+n = len(arr)
+for i in range(n):
+min_idx = i
+for j in range(i + 1, n):
+if arr[j] < arr[min_idx]:
+min_idx = j
+arr[i], arr[min_idx] = arr[min_idx], arr[i]
+data=input("Enter array to sort:").split(',')
+data=list(data)
+# Selection Sort Example
+data_selection = list(data)
+print("\nOriginal list for Selection Sort:", data_selection)
+selection_sort(data_selection)
+print("Sorted list (Selection Sort):", data_selection)
