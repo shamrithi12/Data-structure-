@@ -1,0 +1,37 @@
+PROGRAM 12 :TREE TRAVERSAL
+CODING:
+# Define a basic Node structure
+class Node:
+def __init__(self, value):
+self.value = value
+self.left = None
+self.right = None
+# Inorder Traversal: Left → Root → Right
+def inorder(node):
+if node is None:
+return []
+return inorder(node.left) + [node.value] + inorder(node.right)
+# Preorder Traversal: Root → Left → Right
+def preorder(node):
+if node is None:
+return []
+return [node.value] + preorder(node.left) + preorder(node.right)
+# Postorder Traversal: Left → Right → Root
+def postorder(node):
+if node is None:
+return []
+return postorder(node.left) + postorder(node.right) + [node.value]
+A = Node('A')
+B = Node('B')
+C = Node('C')
+D = Node('D')
+E = Node('E')
+F = Node('F')
+A.left = B
+A.right = C
+B.left = D
+B.right = E
+C.right = F
+print("Inorder:", inorder(A)) # ['D', 'B', 'E', 'A', 'C', 'F']
+print("Preorder:", preorder(A)) # ['A', 'B', 'D', 'E', 'C', 'F']
+print("Postorder:", postorder(A)) # ['D', 'E', 'B', 'F', 'C', 'A']
