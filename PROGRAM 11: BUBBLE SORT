@@ -1,0 +1,15 @@
+PROGRAM 11: BUBBLE SORT
+CODING:
+def bubble_sort(arr):
+n = len(arr)
+for i in range(n):
+for j in range(0, n - i - 1):
+if arr[j] > arr[j + 1]:
+arr[j], arr[j + 1] = arr[j + 1], arr[j]
+data=input("Enter array to sort:").split(',')
+data=list(data)
+# Bubble Sort Example
+data_bubble = list(data)
+print("\nOriginal list for Bubble Sort:", data_bubble)
+bubble_sort(data_bubble)
+print("Sorted list (Bubble Sort):", data_bubble)
