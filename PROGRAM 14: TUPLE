@@ -1,0 +1,19 @@
+PROGRAM 14: TUPLE
+CODING:
+# 1. Creating a tuple
+tup = (10, 20, 30, 40, 50)
+print("Tuple:", tup)
+# Access elements
+print("First element:", tup[0])
+print("Last element:", tup[-1])
+# Slice
+print("Slice tup[1:4]:", tup[1:4])
+# 2. Concatenate tuples
+t1 = (1, 2, 3)
+t2 = (4, 5, 6)
+t3 = t1 + t2
+print("\nConcatenated Tuple:", t3)
+# 3. Max, Min, Length
+print("Maximum:", max(t3))
+print("Minimum:", min(t3))
+print("Length:", len(t3))
