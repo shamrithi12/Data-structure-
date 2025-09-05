@@ -1,0 +1,20 @@
+PROGRAM 8: BINARY SEARCH
+CODING:
+def binary_search(arr, target, low, high):
+if low > high:
+return -1 # Base case: not found
+mid = (low + high) // 2
+if arr[mid] == target:
+return mid
+elif arr[mid] < target:
+return binary_search(arr, target, mid + 1, high)
+else:
+return binary_search(arr, target, low, mid - 1)
+# Example usage
+numbers = [3, 8, 15, 22, 27, 31, 42, 56, 64]
+target_value = 31
+result = binary_search(numbers, target_value, 0, len(numbers) - 1)
+if result != -1:
+print(f"Target {target_value} found at index {result}")
+else:
+print(f"Target {target_value} not found in the list")
