@@ -1,0 +1,99 @@
+students = []
+def register_student():
+ name= input("Enter student name: ")
+ roll = input("Enter roll number: ")
+ course = input("Enter course name: ")
+student = {'name': name, 'roll': roll, 'course': course}
+ students.append(student)
+ print("Student registered.")
+def show_students():
+ if not students:
+ print("No students.")
+ else:
+ for s in students:
+ print("Name:", s['name'])
+ print("Roll:", s['roll'])
+ print("Course:", s['course'])
+ print()
+def search_student():
+ roll = input("Enter roll number: ")
+ for s in students:
+ if s['roll'] == roll:
+ print("Name:", s['name'])
+ print("Course:", s['course'])
+ return
+ print("Student not found.")
+def update():
+ change=input("Enetr the deatil to changed:")
+ change=str(change)
+ if change=="name":
+ name_change=input("Enter name to be changed:")
+ name_change=str(name_change)
+ if name_change in student["name"]:
+ 
+ changed_name=input("New name:")
+ changed_name=str(changed_name)
+ for dictionary in student:
+ if student["name"] == name_change:
+ student["name"]=changed_name
+if change=="rollno":
+ roll_change=input("Enter rollno to be changed:")
+ roll_change=str(roll_change)
+ if roll_change in student["roll"]:
+ 
+ changed_roll=input("New roll:")
+ changed_roll=str(changed_roll)
+ for dictionary in student:
+ if student["roll"] == roll_change:
+ student["roll"]=changed_roll
+ if change=="course":
+ course_change=input("Enter course to be changed:")
+ course_change=str(course_change)
+ if course_change in student["course"]:
+ 
+ changed_course=input("New course:")
+ changed_course=str(changed_course)
+ for dictionary in student:
+ if student["course"] == course_change:
+ student["course"]=changed_course 
+ 
+while True:
+ print("1. Register Student")
+ print("2. Show Students")
+ print("3. Search by Roll Number")
+ print("4. Update a student deatils")
+ print("5. Exit")
+ choice = input("Choice: ")
+ if choice == '1':
+ name = input("Enter student name: ")
+ roll = input("Enter roll number: ")
+course = input("Enter course name: ")
+ student = {'name': name, 'roll': roll, 'course': course}
+ students.append(student)
+ print("Student registered.")
+ elif choice == '2':
+ if not students:
+ print("No students.")
+ else:
+ for s in students:
+ print("Name:", s['name'])
+ print("Roll:", s['roll'])
+ print("Course:", s['course'])
+ print()
+ elif choice == '3':
+ roll = input("Enter roll number: ")
+ found = False
+ for s in students:
+ if s['roll'] == roll:
+ print("Name:", s['name'])
+ print("Course:", s['course'])
+ found = True
+ break
+ if not found:
+ print("Student not found.")
+ elif choice == '4':
+ update()
+ elif choice == '5':
+ break
+ else:
+ print("Invalid choice.")
